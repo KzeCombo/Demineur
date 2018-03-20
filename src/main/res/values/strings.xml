@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Demineur</string>
+    <string name="score">Score</string>
+    <string name="todo">TODO</string>
+</resources>
