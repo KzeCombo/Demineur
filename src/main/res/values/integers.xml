@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="easy_size">2</integer>
+    <integer name="easy_bomb">1</integer>
+
+    <integer name="medium_size">9</integer>
+    <integer name="medium_bomb">10</integer>
+
+    <integer name="hard_size">12</integer>
+    <integer name="hard_bomb">20</integer>
+    <!-- Les tailles choisies sont petites pour la visibilité, mais rien n'empêche de mettre plus-->
+</resources>
