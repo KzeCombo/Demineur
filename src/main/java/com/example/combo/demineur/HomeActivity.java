@@ -49,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openActivityNouvellePartie(){
-        Intent intent = new Intent(this, NouvellePartie.class);
+        Intent intent = new Intent(this, AccueilActivity.class);
         startActivity(intent);
     }
 

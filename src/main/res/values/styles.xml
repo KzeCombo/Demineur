@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -11,12 +11,12 @@
     <style name="TitleText" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/navy</item>
         <item name="android:textSize">30sp</item>
-        <item name="android:textAlignment">center</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
     </style>
 
     <style name="ContentText" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/gray</item>
-        <item name="android:textAlignment">center</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
     </style>
 
 
