@@ -1,0 +1,40 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdftex 2018.4.21)  21 APR 2018 11:08
+entering extended mode
+**C:/Users/Combo/Documents/L3_Info/L3_S6/AppMobile/RapportLaTeX/ma_biblio.bib
+(C:/Users/Combo/Documents/L3_Info/L3_S6/AppMobile/RapportLaTeX/ma_biblio.bib
+! Undefined control sequence.
+l.4   note = {\url
+                  {https://developer.android.com}}
+? 
+! Undefined control sequence.
+l.9   note = {\url
+                  {https://developer.apple.com}}
+? 
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+! Undefined control sequence.
+l.14   note = {\url
+                   {https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27exploitat...
+
+? 
+)
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\end
+[1{C:/Users/Combo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(\end occurred inside a group at level 2)
+
+### simple group (level 2) entered at line 14 ({)
+### simple group (level 1) entered at line 11 ({)
+### bottom level<C:/Users/Combo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb>
+Output written on ma_biblio.pdf (1 page, 17721 bytes).
+PDF statistics:
+ 10 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
