@@ -28,7 +28,7 @@
 
 %% Résumé:
 \begin{abstract}
-	Dans ce rapport, nous allons vous montrer ce que nous avons pu voir en développement mobile cette année, et le projet que l'on a pu fait cette année.\\ 
+	Dans ce rapport, nous allons vous montrer ce que nous avons pu voir en développement mobile, et le projet que l'on a fait cette année.\\ 
 
 	Notre projet porte sur le fameux jeu Démineur.\\
 Règle du jeu: vous devez dévoiler toutes les cases sans jamais appuyer sur une bombe cachée.\\ Appuyez sur une case pour tenter de la dévoiler.\\ Vous pouvez également appuyer sur le bouton du drapeau, puis sur une case, afin de la marquer, si vous pensez qu\'une bombe se trouve à cet endroit.\\ Pour vous aider, les cases révélées indiqueront le nombres de bombes sur les 8 cases adjacentes.\\
@@ -40,16 +40,24 @@ Règle du jeu: vous devez dévoiler toutes les cases sans jamais appuyer sur une
 \section{Introduction}
 \label{section:intro} % pour faire référence à la section ailleurs (\ref{...} voir plus bas)
 
-	Actuellement, sur le marché développement mobile, les deux principaux systèmes sont Android et iOS.~\cite{statOS}\\ Nous allons vous présenté notre jeu sur les deux systèmes Android et iOS, pour ce faire on a utilisé deux IDE pour les deux OS: Android Studio pour Android et Xcode pour iOS.   
+	Actuellement, sur le marché du développement mobile, les deux principaux systèmes sont Android et iOS.~\cite{statOS}\\ Nous allons vous présenté notre jeu sur les deux systèmes Android et iOS, pour ce faire on a utilisé deux IDE pour les deux OS: Android Studio pour Android et Xcode pour iOS.   
 
 
 \section{Description générale de l'application}
-Voici une belle capture d'écran d'une partie en cours:
+Voici une capture d'écran du Main Activity:
 \begin{center}
-  \includegraphics[scale=0.5]{exo3_1_1.png}
+  \includegraphics[scale=0.12]{Main.png}
 \end{center}
+	L' application fonctionne sur Android et iOS, elle fonctionne correctement sur 
+tout type d' \'ecran (grand, petit, …), en mode portrait et paysage.\\
 
-Une liste à \textbf{puces}:
+Mais que fait-elle exactement ? \\
+	C'est le jeu Démineur :  But est de dévoiler toutes les cases sans jamais appuyer sur une bombe cachée.\\
+	Au lancement de l’ application, la page d’ accueil apparaître et donner la
+possibilité à l' utilisateur de jouer une nouvelle partie (choix : le niveau de difficulté), de reprendre une partie sauvegardée ou de consulter la liste des scores enregistrés.
+
+
+
 \begin{itemize}
 \item la documentation d'\textit{Android}~\cite{androidDoc}
   est bien écrite,
@@ -89,7 +97,8 @@ public class Main {
 \section{Quelques points délicats/intéressants}
 
 
-\section{Conclusion}
+\section{Conclusion générale}
+	Ce cours était bien utile, notamment en ce qui concerne la création d'application mobile.
 
 
 %%% La bibliographie:
