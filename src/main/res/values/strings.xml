@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Demineur</string>
     <string name="score">Score</string>
+    <string name="scores">Scores</string>
+    <string name="reprendre">Reprendre</string>
     <string name="todo">TODO</string>
 
     <string name="instruction_title">Instructions</string>
-    <string name="instruction_content">Bienvenue dans les démineurs.\n
+    <string name="instruction_content">Bienvenue dans les démineurs
+        .\n
         \n
         Dans ce jeu, vous devez dévoiler toutes les cases sans jamais appuyer sur une bombe cachée.\n
         \n

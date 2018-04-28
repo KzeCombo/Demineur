@@ -45,6 +45,15 @@
             android:textSize="12sp"
             android:onClick="recommencer"
             android:layout_alignParentLeft="true" />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/flag_Switch"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
     </RelativeLayout>
 
 </RelativeLayout>

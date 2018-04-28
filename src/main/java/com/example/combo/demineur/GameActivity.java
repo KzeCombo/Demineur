@@ -6,11 +6,14 @@ package com.example.combo.demineur;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.Switch;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -22,6 +25,12 @@ public class GameActivity extends AppCompatActivity {
 
     private TableLayout table = null;
     private Switch flagSwitch = null;
+
+    //private Chronometer chronometer;
+    //private Button OnChronometer;
+    //private boolean running;
+    //private long pauseOffset;
+
 
     private Cellule[][] plateau;
     private int taille;
@@ -35,6 +44,17 @@ public class GameActivity extends AppCompatActivity {
 
         flagSwitch = (Switch)findViewById(R.id.flag_Switch);
         table = (TableLayout) findViewById(R.id.table_Game);
+        /**
+        //OnChronometer = findViewById(R.id.gameRestartButton);
+        //OnChronometer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetChronometer();
+            }
+        });
+        //chronometer = findViewById(R.id.chronometer);
+        //chronometer.setFormat("Temps: ");
+         */
 
         if(savedInstanceState != null){
             //On récupère l'état du switch et du plateau
@@ -196,6 +216,32 @@ public class GameActivity extends AppCompatActivity {
             }
         }
     }
+
+    /**
+     * Gestion du Chronomètre
+
+    public void startChronometer(){
+        if(!running){
+            chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffset);
+            chronometer.start();
+            running = true;
+        }
+    }
+
+    public void pauseChronometer(View view){
+        if(running){
+            chronometer.stop();
+            pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase();
+            running = false;
+        }
+    }
+
+    public void resetChronometer(){
+        chronometer.setBase(SystemClock.elapsedRealtime());
+        pauseOffset = 0;
+        startChronometer();
+    }
+     */
 
     /**
      * Termine la partie en cas de défaite
