@@ -88,20 +88,99 @@ partie et le second pour accéder à la liste des partie en cours  enregistrés,
 gérant et parties en cours et les scores.
 
 \subsection{Android} %% une sous-section
-Pour écrire du code, on peut par exemple utiliser l'environnement
-\textit{verbatim}:
+La classe la plus important est GameActivity, elle va générer la grille grâce aux informations saisie au préalable.
+On peut remplie le plateau à partir de rien à l'aide de la fonction  \textit{fillTableau()} ou bein à partir d'une sauvegarde antérieure  avec la fonction \textit{fillTableau(Cellule[][] plateau)}.
+
 \begin{verbatim}
-public class Main {
-   public static void main(String[] args) {
-      System.out.println("Hello World!");
-   }
+
+    /**
+     * Remplit le plateau de jeu à partir de rien
+     */
+
+    private void fillTableau(){
+        plateau = new Cellule[taille][taille];
+        // On remplit le plateau
+        for (int y = 0; y < taille; y++) {
+            TableRow r = new TableRow(this);
+            table.addView(r);
+            for (int x = 0; x < taille; x++) {
+                Cellule c = new Cellule(this,x,y);
+                c.setOnClickListener(onClickCellule);
+                r.addView(c);
+                plateau[x][y] = c;
+            }
+        }
 }
+
 \end{verbatim}
 
-\subsection{iOS} %% une autre sous-section
+\begin{verbatim}
+
+    /**
+     * Remplit le tableau de jeu à partir d'une sauvegarde antérieure
+     * @param plateau le plateau à réutiliser
+     */
+
+    private void fillTableau(Cellule[][] plateau){
+        for(int y = 0; y < taille; y++){
+            TableRow r = new TableRow(this);
+            table.addView(r);
+            for (int x = 0; x < taille; x++) {
+                Cellule c = plateau[x][y];
+
+                ((ViewGroup)c.getParent()).removeView(c);
+                if(!c.isRevele())
+                    c.setOnClickListener(onClickCellule);
+                r.addView(c);
+            }
+        }
+}
+
+\end{verbatim}
+
+Pour la gestion de mines/bombe, elle se fait de façon aléatoire
+
+\begin{verbatim}
+
+    /**
+     * Place les bombes sur le plateau
+     */
+    private void addBombes(){
+        int cptBombe = bombe;
+        while (cptBombe>0){
+            Random gen = new Random();
+            int x = gen.nextInt(taille);
+            int y = gen.nextInt(taille);
+
+            if(!plateau[x][y].isBombe()){
+                plateau[x][y].devenirBombe();
+                cptBombe--;
+            }
+        }
+    }
 
 
-\section{Quelques points délicats/intéressants}
+\end{verbatim}
+
+Pour vérifier que le joueur à bien \textit{gagner}, on parcours tout le tableau et on regarde que toutes les case ont étaient révélé et
+que les bombes ont étaient trouvé.
+
+\begin{verbatim}
+
+    /**
+     * Vérifie si la partie est terminée
+     */
+    private void testVictoire(){
+        for(int i=0; i<taille; i++) {
+            for (int j = 0; j < taille; j++) {
+                if ((!plateau[i][j].isRevele()) && (!plateau[i][j].isBombe())) {
+                    return;
+                }
+            }
+        }
+victoire();
+
+\end{verbatim}•
 
 
 \section{Conclusion générale}
